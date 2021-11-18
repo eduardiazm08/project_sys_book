@@ -2,6 +2,12 @@
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
   <div class="container-fluid">
     <div class="navbar-wrapper">
+      <div class="navbar-minimize">
+          <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+            <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+            <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+          </button>
+      </div>
       <a class="navbar-brand" href="#">{{ $titlePage }}</a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +28,7 @@
       </form>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('home') }}">
+          <a class="nav-link" href="{{ route('escritorio') }}">
             <i class="material-icons">dashboard</i>
             <p class="d-lg-none d-md-block">
               {{ __('Stats') }}
@@ -53,7 +59,7 @@
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-            <a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __('Profile') }}</a>
+            <a class="dropdown-item" href="#">{{ __('Profile') }}</a>
             <a class="dropdown-item" href="#">{{ __('Settings') }}</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
